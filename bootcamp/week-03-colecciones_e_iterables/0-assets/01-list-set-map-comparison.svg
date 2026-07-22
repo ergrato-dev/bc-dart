@@ -1,0 +1,51 @@
+<svg width="900" height="400" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <title>Comparación entre List, Set y Map en Dart</title>
+  <desc>Diagrama de tres columnas: List ordenada con duplicados permitidos, Set sin duplicados sin orden garantizado, Map de pares clave-valor</desc>
+
+  <rect width="900" height="400" fill="#0d1117"/>
+
+  <text x="450" y="36" fill="#ffffff" font-size="20" font-weight="700" text-anchor="middle">List, Set y Map</text>
+
+  <!-- List -->
+  <rect x="30" y="66" width="270" height="300" rx="10" fill="#161b22" stroke="#40C4FF" stroke-width="1.5"/>
+  <text x="165" y="94" fill="#40C4FF" font-size="15" font-weight="700" text-anchor="middle">List&lt;String&gt;</text>
+  <text x="165" y="114" fill="#8b949e" font-size="11" text-anchor="middle">ordenada · duplicados OK</text>
+
+  <rect x="50" y="130" width="230" height="34" rx="4" fill="#0d1117" stroke="#30363d"/>
+  <text x="60" y="152" fill="#e6edf3" font-size="12" font-family="monospace">[0] 'Clean Code'</text>
+  <rect x="50" y="168" width="230" height="34" rx="4" fill="#0d1117" stroke="#30363d"/>
+  <text x="60" y="190" fill="#e6edf3" font-size="12" font-family="monospace">[1] '1984'</text>
+  <rect x="50" y="206" width="230" height="34" rx="4" fill="#0d1117" stroke="#30363d"/>
+  <text x="60" y="228" fill="#e6edf3" font-size="12" font-family="monospace">[2] 'Clean Code'</text>
+  <text x="165" y="264" fill="#8b949e" font-size="11" text-anchor="middle">acceso por índice: lista[0]</text>
+  <text x="165" y="282" fill="#8b949e" font-size="11" text-anchor="middle">'Clean Code' aparece 2 veces</text>
+
+  <!-- Set -->
+  <rect x="315" y="66" width="270" height="300" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="450" y="94" fill="#3fb950" font-size="15" font-weight="700" text-anchor="middle">Set&lt;String&gt;</text>
+  <text x="450" y="114" fill="#8b949e" font-size="11" text-anchor="middle">sin duplicados · sin orden</text>
+
+  <circle cx="400" cy="180" r="40" fill="#0d1117" stroke="#30363d"/>
+  <text x="400" y="184" fill="#e6edf3" font-size="11" text-anchor="middle" font-family="monospace">Ficción</text>
+  <circle cx="500" cy="180" r="40" fill="#0d1117" stroke="#30363d"/>
+  <text x="500" y="184" fill="#e6edf3" font-size="11" text-anchor="middle" font-family="monospace">Ensayo</text>
+  <circle cx="450" cy="250" r="40" fill="#0d1117" stroke="#30363d"/>
+  <text x="450" y="254" fill="#e6edf3" font-size="11" text-anchor="middle" font-family="monospace">Poesía</text>
+
+  <text x="450" y="300" fill="#8b949e" font-size="11" text-anchor="middle">agregar 'Ficción' de nuevo</text>
+  <text x="450" y="318" fill="#8b949e" font-size="11" text-anchor="middle">no cambia el Set</text>
+
+  <!-- Map -->
+  <rect x="600" y="66" width="270" height="300" rx="10" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+  <text x="735" y="94" fill="#d29922" font-size="15" font-weight="700" text-anchor="middle">Map&lt;String, int&gt;</text>
+  <text x="735" y="114" fill="#8b949e" font-size="11" text-anchor="middle">pares clave → valor</text>
+
+  <rect x="620" y="130" width="230" height="34" rx="4" fill="#0d1117" stroke="#30363d"/>
+  <text x="630" y="152" fill="#e6edf3" font-size="12" font-family="monospace">'Clean Code' → 3</text>
+  <rect x="620" y="168" width="230" height="34" rx="4" fill="#0d1117" stroke="#30363d"/>
+  <text x="630" y="190" fill="#e6edf3" font-size="12" font-family="monospace">'1984' → 0</text>
+  <rect x="620" y="206" width="230" height="34" rx="4" fill="#0d1117" stroke="#30363d"/>
+  <text x="630" y="228" fill="#e6edf3" font-size="12" font-family="monospace">'Dune' → 5</text>
+  <text x="735" y="264" fill="#8b949e" font-size="11" text-anchor="middle">acceso por clave: map['Dune']</text>
+  <text x="735" y="282" fill="#8b949e" font-size="11" text-anchor="middle">clave inexistente → null</text>
+</svg>
