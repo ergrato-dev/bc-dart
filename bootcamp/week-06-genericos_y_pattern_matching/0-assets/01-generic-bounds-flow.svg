@@ -1,0 +1,42 @@
+<svg width="800" height="420" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <title>Cómo se acota y se vincula un parámetro de tipo genérico</title>
+  <desc>Diagrama de flujo: class Repository con T extends Identifiable, mostrando cómo Book cumple el bound y se vincula como Repository de Book, mientras un tipo sin el getter id es rechazado por el analyzer</desc>
+
+  <rect width="800" height="420" fill="#0d1117"/>
+
+  <text x="400" y="34" fill="#ffffff" font-size="20" font-weight="700" text-anchor="middle">class Repository&lt;T extends Identifiable&gt;</text>
+
+  <!-- Bound declaration -->
+  <rect x="300" y="60" width="200" height="50" rx="8" fill="#161b22" stroke="#40C4FF" stroke-width="1.5"/>
+  <text x="400" y="90" fill="#40C4FF" font-size="13" text-anchor="middle" font-family="monospace">T extends Identifiable</text>
+
+  <line x1="330" y1="110" x2="220" y2="170" stroke="#8b949e" stroke-width="2"/>
+  <line x1="470" y1="110" x2="580" y2="170" stroke="#8b949e" stroke-width="2"/>
+
+  <!-- Candidate that satisfies -->
+  <rect x="100" y="170" width="240" height="60" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="220" y="194" fill="#3fb950" font-size="13" text-anchor="middle" font-family="monospace">class Book implements</text>
+  <text x="220" y="212" fill="#3fb950" font-size="13" text-anchor="middle" font-family="monospace">Identifiable</text>
+
+  <!-- Candidate that fails -->
+  <rect x="460" y="170" width="240" height="60" rx="8" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="580" y="194" fill="#f85149" font-size="13" text-anchor="middle" font-family="monospace">class Plain</text>
+  <text x="580" y="212" fill="#f85149" font-size="13" text-anchor="middle" font-family="monospace">(sin id)</text>
+
+  <line x1="220" y1="230" x2="220" y2="280" stroke="#3fb950" stroke-width="2"/>
+  <line x1="580" y1="230" x2="580" y2="280" stroke="#f85149" stroke-width="2"/>
+
+  <!-- Result OK -->
+  <rect x="100" y="280" width="240" height="60" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="220" y="304" fill="#ffffff" font-size="13" text-anchor="middle" font-family="monospace">Repository&lt;Book&gt;</text>
+  <text x="220" y="322" fill="#3fb950" font-size="11" text-anchor="middle">item.id compila ✓</text>
+
+  <!-- Result error -->
+  <rect x="460" y="280" width="240" height="60" rx="8" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="580" y="304" fill="#ffffff" font-size="13" text-anchor="middle" font-family="monospace">Repository&lt;Plain&gt;</text>
+  <text x="580" y="322" fill="#f85149" font-size="11" text-anchor="middle">error de compilación ✗</text>
+
+  <!-- legend -->
+  <rect x="220" y="370" width="360" height="34" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="400" y="392" fill="#8b949e" font-size="11" text-anchor="middle">el bound decide qué tipos concretos puede recibir T</text>
+</svg>

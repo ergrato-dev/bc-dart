@@ -1,0 +1,10 @@
+name: repositorio_generico
+description: Repositorio genérico con resultados sellados y pattern matching — proyecto semana 6 (Dart puro, sin Flutter)
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dev_dependencies:
+  lints: ^5.0.0
