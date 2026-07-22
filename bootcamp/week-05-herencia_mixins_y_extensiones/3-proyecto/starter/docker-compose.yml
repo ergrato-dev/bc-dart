@@ -1,0 +1,11 @@
+services:
+  dart:
+    build: .
+    volumes:
+      - .:/app
+      - dart-pub-cache:/root/.pub-cache
+    working_dir: /app
+    command: dart test
+
+volumes:
+  dart-pub-cache:

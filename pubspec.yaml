@@ -1,0 +1,9 @@
+name: bc_dart_root
+description: >
+  Paquete placeholder — existe únicamente para que la imagen Docker raíz (dart pub get) construya
+  de forma standalone y sirva como smoke test (`docker compose run --rm dart dart --version`).
+  Los proyectos reales del bootcamp viven en cada bootcamp/week-XX/3-proyecto/starter/.
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'

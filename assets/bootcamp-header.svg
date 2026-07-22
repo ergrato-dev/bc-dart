@@ -1,0 +1,10 @@
+<svg width="800" height="160" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Bootcamp Dart Zero to Hero</title>
+  <desc id="desc">Encabezado del bootcamp Dart: fondo oscuro con el texto "bc-dart" y "Zero to Hero"</desc>
+  <rect width="800" height="160" fill="#0d1117"/>
+  <rect x="24" y="24" width="752" height="112" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="56" y="86" fill="#40C4FF" font-size="34" font-weight="700" font-family="system-ui, -apple-system, sans-serif">bc-dart</text>
+  <text x="56" y="116" fill="#8b949e" font-size="16" font-family="system-ui, -apple-system, sans-serif">Bootcamp Dart · Zero to Hero · 10 semanas · 60 horas</text>
+  <circle cx="720" cy="80" r="34" fill="#0175C2"/>
+  <text x="720" y="88" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">D</text>
+</svg>
