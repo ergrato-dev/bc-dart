@@ -2,19 +2,24 @@
 
 > **Fase 2 — POO y Tipos Avanzados** | Semana 5 de 10 | ⏱️ 6 horas
 
-## 🎯 Objetivos de aprendizaje
+Segunda semana de POO: cómo compartir comportamiento entre clases con `extends`, adoptar
+contratos con `implements`, inyectar comportamiento transversal con mixins, y agregar métodos a
+tipos existentes con extensiones — el arsenal completo antes de genéricos y pattern matching.
 
-> 🚧 **Contenido en desarrollo.** Usa el prompt `nueva-semana` para generar el contenido completo.
+## 🎯 Objetivos de aprendizaje
 
 Al finalizar esta semana, el estudiante será capaz de:
 
-- [ ] Objetivo 1
-- [ ] Objetivo 2
-- [ ] Objetivo 3
+- [ ] Extender una clase con `extends`, usar `super`, y modelar contratos con clases abstractas
+- [ ] Aplicar polimorfismo tratando distintas subclases a través de su tipo base
+- [ ] Adoptar un contrato con `implements`, entendiendo que no hereda implementación
+- [ ] Declarar mixins, componerlos con `with`, y restringirlos con la cláusula `on`
+- [ ] Agregar extension methods a tipos existentes y distinguirlos de un extension type
 
 ## 📚 Requisitos previos
 
-- Semana anterior completada
+- [Semana 04 — POO: Clases y Constructores](../week-04-poo_clases_y_constructores/README.md)
+  completada
 - Dart SDK local (`dart --version` funcionando) y/o Docker
 
 ## 🗂️ Estructura de la semana
@@ -29,15 +34,20 @@ Al finalizar esta semana, el estudiante será capaz de:
 
 ### Teoría
 
-> 🚧 Por generar — usa el prompt `nueva-teoria`
+1. [Herencia y Clases Abstractas](1-teoria/01-herencia-y-clases-abstractas.md)
+2. [implements e Interfaces Implícitas](1-teoria/02-implements-e-interfaces.md)
+3. [Mixins](1-teoria/03-mixins.md)
+4. [Extension Methods y Extension Types](1-teoria/04-extension-methods-y-types.md)
 
 ### Prácticas
 
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
+1. [Ejercicio 01 — Herencia, Clases Abstractas e Implements](2-practicas/ejercicio-01-herencia-y-abstractas/README.md)
+2. [Ejercicio 02 — Mixins y Extension Methods](2-practicas/ejercicio-02-mixins-y-extensiones/README.md)
 
 ### Proyecto
 
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
+[Catálogo Polimórfico](3-proyecto/README.md) — integra herencia abstracta, un mixin y una
+extensión sobre `List` sobre el dominio único asignado.
 
 ## ⏱️ Distribución del tiempo (6 horas)
 
@@ -52,7 +62,7 @@ Al finalizar esta semana, el estudiante será capaz de:
 - [ ] Ejercicios completados (prácticas descomentadas y funcionando)
 - [ ] Proyecto adaptado al dominio asignado
 - [ ] `dart analyze` sin errores (verificable con Docker)
-- [ ] `dart test` pasando
+- [ ] Programa ejecutándose por consola con `dart run`
 
 ## 🔗 Navegación
 

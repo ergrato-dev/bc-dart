@@ -1,0 +1,43 @@
+<svg width="800" height="420" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <title>Orden de composición al combinar varios mixins con with</title>
+  <desc>Diagrama vertical: FullFeaturedBook extends Book with Loanable, Reservable — muestra el orden de aplicación de abajo hacia arriba y qué mixin gana si hay solapamiento</desc>
+
+  <rect width="800" height="420" fill="#0d1117"/>
+
+  <text x="400" y="34" fill="#ffffff" font-size="20" font-weight="700" text-anchor="middle">class FullFeaturedBook extends Book with Loanable, Reservable</text>
+
+  <!-- Base -->
+  <rect x="260" y="330" width="280" height="50" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="400" y="360" fill="#e6edf3" font-size="13" text-anchor="middle" font-family="monospace">Book (clase base)</text>
+
+  <line x1="400" y1="330" x2="400" y2="290" stroke="#8b949e" stroke-width="2"/>
+
+  <!-- Loanable -->
+  <rect x="260" y="240" width="280" height="50" rx="8" fill="#161b22" stroke="#40C4FF" stroke-width="1.5"/>
+  <text x="400" y="270" fill="#40C4FF" font-size="13" text-anchor="middle" font-family="monospace">with Loanable</text>
+  <text x="650" y="270" fill="#8b949e" font-size="11" text-anchor="middle">se aplica 1º</text>
+
+  <line x1="400" y1="240" x2="400" y2="200" stroke="#8b949e" stroke-width="2"/>
+
+  <!-- Reservable -->
+  <rect x="260" y="150" width="280" height="50" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="400" y="180" fill="#3fb950" font-size="13" text-anchor="middle" font-family="monospace">with Reservable</text>
+  <text x="650" y="180" fill="#8b949e" font-size="11" text-anchor="middle">se aplica 2º (encima)</text>
+
+  <line x1="400" y1="150" x2="400" y2="110" stroke="#8b949e" stroke-width="2"/>
+
+  <!-- Resultado final -->
+  <rect x="230" y="60" width="340" height="50" rx="8" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+  <text x="400" y="90" fill="#d29922" font-size="13" text-anchor="middle" font-family="monospace">FullFeaturedBook (instancia final)</text>
+
+  <!-- leyenda -->
+  <rect x="60" y="330" width="180" height="60" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="150" y="352" fill="#8b949e" font-size="10" text-anchor="middle">si Loanable y</text>
+  <text x="150" y="366" fill="#8b949e" font-size="10" text-anchor="middle">Reservable definen</text>
+  <text x="150" y="380" fill="#8b949e" font-size="10" text-anchor="middle">el mismo miembro,</text>
+
+  <rect x="560" y="330" width="180" height="60" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+  <text x="650" y="352" fill="#3fb950" font-size="10" text-anchor="middle">gana Reservable:</text>
+  <text x="650" y="366" fill="#3fb950" font-size="10" text-anchor="middle">el más a la derecha</text>
+  <text x="650" y="380" fill="#3fb950" font-size="10" text-anchor="middle">en with A, B</text>
+</svg>
