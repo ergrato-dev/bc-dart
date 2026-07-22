@@ -1,0 +1,49 @@
+<svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <title>Excepción (control de flujo interrumpido) vs Result (valor de retorno)</title>
+  <desc>Comparativa de dos columnas: la izquierda muestra una excepción que interrumpe el flujo normal y requiere try/catch en cada llamador que lo recuerde; la derecha muestra un Result sellado que viaja como valor de retorno normal y se consume con un switch exhaustivo verificado por el analyzer</desc>
+
+  <rect width="900" height="420" fill="#0d1117"/>
+
+  <text x="450" y="34" fill="#ffffff" font-size="20" font-weight="700" text-anchor="middle">¿Cómo viaja un fallo?</text>
+
+  <!-- Column headers -->
+  <rect x="60" y="60" width="360" height="40" rx="8" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="240" y="86" fill="#f85149" font-size="15" font-weight="700" text-anchor="middle">Exception + throw</text>
+
+  <rect x="480" y="60" width="360" height="40" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="660" y="86" fill="#3fb950" font-size="15" font-weight="700" text-anchor="middle">Result&lt;T&gt; sellado</text>
+
+  <!-- Left column flow -->
+  <rect x="90" y="120" width="300" height="44" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="240" y="147" fill="#e6edf3" font-size="12" text-anchor="middle" font-family="monospace">parseAge(raw)</text>
+
+  <line x1="240" y1="164" x2="240" y2="190" stroke="#8b949e" stroke-width="2"/>
+  <rect x="90" y="190" width="300" height="44" rx="6" fill="#161b22" stroke="#f85149" stroke-width="1"/>
+  <text x="240" y="217" fill="#f85149" font-size="12" text-anchor="middle" font-family="monospace">throw FormatException</text>
+
+  <line x1="240" y1="234" x2="240" y2="260" stroke="#8b949e" stroke-width="2"/>
+  <rect x="90" y="260" width="300" height="50" rx="6" fill="#161b22" stroke="#d29922" stroke-width="1"/>
+  <text x="240" y="282" fill="#d29922" font-size="11" text-anchor="middle">el flujo se corta,</text>
+  <text x="240" y="298" fill="#d29922" font-size="11" text-anchor="middle">sube hasta el try/catch más cercano</text>
+
+  <line x1="240" y1="310" x2="240" y2="336" stroke="#8b949e" stroke-width="2"/>
+  <rect x="90" y="336" width="300" height="44" rx="6" fill="#161b22" stroke="#f85149" stroke-width="1"/>
+  <text x="240" y="363" fill="#e6edf3" font-size="11" text-anchor="middle">nada obliga a manejarlo —</text>
+
+  <!-- Right column flow -->
+  <rect x="510" y="120" width="300" height="44" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="660" y="147" fill="#e6edf3" font-size="12" text-anchor="middle" font-family="monospace">parseAge(raw)</text>
+
+  <line x1="660" y1="164" x2="660" y2="190" stroke="#8b949e" stroke-width="2"/>
+  <rect x="510" y="190" width="300" height="44" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+  <text x="660" y="217" fill="#3fb950" font-size="12" text-anchor="middle" font-family="monospace">return Err(mensaje)</text>
+
+  <line x1="660" y1="234" x2="660" y2="260" stroke="#8b949e" stroke-width="2"/>
+  <rect x="510" y="260" width="300" height="50" rx="6" fill="#161b22" stroke="#40C4FF" stroke-width="1"/>
+  <text x="660" y="282" fill="#40C4FF" font-size="11" text-anchor="middle">el flujo sigue normal,</text>
+  <text x="660" y="298" fill="#40C4FF" font-size="11" text-anchor="middle">Result&lt;T&gt; es el valor de retorno</text>
+
+  <line x1="660" y1="310" x2="660" y2="336" stroke="#8b949e" stroke-width="2"/>
+  <rect x="510" y="336" width="300" height="44" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+  <text x="660" y="363" fill="#e6edf3" font-size="11" text-anchor="middle">switch exhaustivo lo obliga</text>
+</svg>

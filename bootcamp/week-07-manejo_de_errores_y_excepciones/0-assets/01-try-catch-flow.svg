@@ -1,0 +1,46 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <title>Flujo de un try con múltiples on, catch y finally</title>
+  <desc>Diagrama de flujo vertical: un bloque try que puede lanzar una excepción, evaluada en orden contra dos cláusulas on específicas y un catch genérico de respaldo, y un bloque finally que se ejecuta siempre al final sin importar qué rama se haya tomado</desc>
+
+  <rect width="800" height="480" fill="#0d1117"/>
+
+  <text x="400" y="34" fill="#ffffff" font-size="20" font-weight="700" text-anchor="middle">try { ... } on A { } on B { } catch (e) { } finally { }</text>
+
+  <!-- try -->
+  <rect x="300" y="60" width="200" height="50" rx="8" fill="#161b22" stroke="#40C4FF" stroke-width="1.5"/>
+  <text x="400" y="90" fill="#40C4FF" font-size="13" text-anchor="middle" font-family="monospace">try { ... }</text>
+
+  <line x1="330" y1="110" x2="150" y2="150" stroke="#8b949e" stroke-width="2"/>
+  <line x1="400" y1="110" x2="400" y2="150" stroke="#8b949e" stroke-width="2"/>
+  <line x1="470" y1="110" x2="650" y2="150" stroke="#8b949e" stroke-width="2"/>
+
+  <!-- on A -->
+  <rect x="60" y="150" width="180" height="55" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="150" y="174" fill="#3fb950" font-size="12" text-anchor="middle" font-family="monospace">on RangeError</text>
+  <text x="150" y="192" fill="#8b949e" font-size="10" text-anchor="middle">se evalúa 1º</text>
+
+  <!-- on B -->
+  <rect x="310" y="150" width="180" height="55" rx="8" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+  <text x="400" y="174" fill="#d29922" font-size="12" text-anchor="middle" font-family="monospace">on FormatException</text>
+  <text x="400" y="192" fill="#8b949e" font-size="10" text-anchor="middle">se evalúa 2º</text>
+
+  <!-- catch generic -->
+  <rect x="560" y="150" width="180" height="55" rx="8" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="650" y="174" fill="#f85149" font-size="12" text-anchor="middle" font-family="monospace">catch (e)</text>
+  <text x="650" y="192" fill="#8b949e" font-size="10" text-anchor="middle">red de seguridad</text>
+
+  <line x1="150" y1="205" x2="400" y2="260" stroke="#8b949e" stroke-width="2"/>
+  <line x1="400" y1="205" x2="400" y2="260" stroke="#8b949e" stroke-width="2"/>
+  <line x1="650" y1="205" x2="400" y2="260" stroke="#8b949e" stroke-width="2"/>
+
+  <!-- finally -->
+  <rect x="260" y="260" width="280" height="55" rx="8" fill="#161b22" stroke="#40C4FF" stroke-width="1.5"/>
+  <text x="400" y="284" fill="#40C4FF" font-size="13" text-anchor="middle" font-family="monospace">finally { ... }</text>
+  <text x="400" y="302" fill="#8b949e" font-size="10" text-anchor="middle">se ejecuta SIEMPRE</text>
+
+  <!-- legend -->
+  <rect x="140" y="360" width="520" height="90" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="400" y="386" fill="#ffffff" font-size="12" text-anchor="middle">Las cláusulas `on` se evalúan en el orden en que aparecen —</text>
+  <text x="400" y="406" fill="#ffffff" font-size="12" text-anchor="middle">coloca los tipos más específicos primero, el `catch` genérico</text>
+  <text x="400" y="426" fill="#ffffff" font-size="12" text-anchor="middle">al final atrapa cualquier excepción no prevista.</text>
+</svg>
