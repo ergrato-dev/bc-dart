@@ -1,0 +1,10 @@
+name: catalogo_de_objetos
+description: Catálogo de objetos con clases — proyecto semana 4 (Dart puro, sin Flutter)
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dev_dependencies:
+  lints: ^5.0.0

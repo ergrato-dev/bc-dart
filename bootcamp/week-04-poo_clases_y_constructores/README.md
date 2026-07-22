@@ -2,19 +2,24 @@
 
 > **Fase 2 — POO y Tipos Avanzados** | Semana 4 de 10 | ⏱️ 6 horas
 
-## 🎯 Objetivos de aprendizaje
+Primera semana de programación orientada a objetos: cómo modelar datos con clases propias,
+los cuatro tipos de constructor, y cómo encapsular estado con getters/setters y miembros
+estáticos — la base de todo lo que viene en las semanas 5 y 6.
 
-> 🚧 **Contenido en desarrollo.** Usa el prompt `nueva-semana` para generar el contenido completo.
+## 🎯 Objetivos de aprendizaje
 
 Al finalizar esta semana, el estudiante será capaz de:
 
-- [ ] Objetivo 1
-- [ ] Objetivo 2
-- [ ] Objetivo 3
+- [ ] Declarar una clase con campos, constructor y métodos, y sobrescribir `toString()`
+- [ ] Elegir entre constructor normal, nombrado, const y factory según el caso de uso
+- [ ] Encapsular campos privados detrás de getters y setters con validación
+- [ ] Usar miembros estáticos (campos, métodos, `static const`) cuando el dato pertenece a la
+      clase y no a una instancia
 
 ## 📚 Requisitos previos
 
-- Semana anterior completada
+- [Semana 03 — Colecciones e Iterables](../week-03-colecciones_e_iterables/README.md)
+  completada
 - Dart SDK local (`dart --version` funcionando) y/o Docker
 
 ## 🗂️ Estructura de la semana
@@ -29,15 +34,20 @@ Al finalizar esta semana, el estudiante será capaz de:
 
 ### Teoría
 
-> 🚧 Por generar — usa el prompt `nueva-teoria`
+1. [Clases y Objetos](1-teoria/01-clases-y-objetos.md)
+2. [Constructores: Nombrados, Const y Factory](1-teoria/02-constructores-nombrados-const-y-factory.md)
+3. [Getters y Setters](1-teoria/03-getters-y-setters.md)
+4. [Miembros Estáticos](1-teoria/04-miembros-estaticos.md)
 
 ### Prácticas
 
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
+1. [Ejercicio 01 — Clases y Constructores](2-practicas/ejercicio-01-clases-y-constructores/README.md)
+2. [Ejercicio 02 — Getters, Setters y Estáticos](2-practicas/ejercicio-02-getters-setters-y-estaticos/README.md)
 
 ### Proyecto
 
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
+[Catálogo de Objetos con Clases](3-proyecto/README.md) — integra clases, constructores y un
+repositorio (`where`/`fold` de la semana 3) sobre el dominio único asignado.
 
 ## ⏱️ Distribución del tiempo (6 horas)
 
@@ -52,7 +62,7 @@ Al finalizar esta semana, el estudiante será capaz de:
 - [ ] Ejercicios completados (prácticas descomentadas y funcionando)
 - [ ] Proyecto adaptado al dominio asignado
 - [ ] `dart analyze` sin errores (verificable con Docker)
-- [ ] `dart test` pasando
+- [ ] Programa ejecutándose por consola con `dart run`
 
 ## 🔗 Navegación
 
