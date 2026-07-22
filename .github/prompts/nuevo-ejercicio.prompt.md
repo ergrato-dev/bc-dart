@@ -82,7 +82,7 @@ final evens = [];
 \`\`\`bash
 cd starter
 dart pub get
-dart run
+dart run main.dart
 \`\`\`
 
 ---

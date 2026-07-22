@@ -48,7 +48,7 @@ de la semana 3.
 ```bash
 cd starter
 dart pub get
-dart run
+dart run bin/main.dart
 ```
 
 ## 🐳 Validar con Docker

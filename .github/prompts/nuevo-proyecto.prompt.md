@@ -104,7 +104,7 @@ Implementar [concepto] aplicado a tu dominio asignado, integrando
 \`\`\`bash
 cd starter
 dart pub get
-dart run
+dart run bin/main.dart
 \`\`\`
 
 ## 🐳 Validar con Docker

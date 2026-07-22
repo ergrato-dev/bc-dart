@@ -291,7 +291,7 @@ Implementar los conceptos de **${TITLE}** aplicados a tu dominio asignado.
 \`\`\`bash
 cd starter
 dart pub get
-dart run
+dart run bin/main.dart
 \`\`\`
 
 ## 🐳 Validar con Docker
