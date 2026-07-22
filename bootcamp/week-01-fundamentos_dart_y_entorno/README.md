@@ -2,20 +2,25 @@
 
 > **Fase 1 — Fundamentos del Lenguaje** | Semana 1 de 10 | ⏱️ 6 horas
 
-## 🎯 Objetivos de aprendizaje
+Primera semana del bootcamp: entorno, tooling y las bases del lenguaje — variables, tipos y
+null safety. Todo lo que sigue se apoya en esto.
 
-> 🚧 **Contenido en desarrollo.** Usa el prompt `nueva-semana` para generar el contenido completo.
+## 🎯 Objetivos de aprendizaje
 
 Al finalizar esta semana, el estudiante será capaz de:
 
-- [ ] Objetivo 1
-- [ ] Objetivo 2
-- [ ] Objetivo 3
+- [ ] Configurar y validar su entorno de trabajo (SDK local y/o Docker)
+- [ ] Usar `dart run`, `dart format`, `dart analyze` y `dart doc` con criterio
+- [ ] Declarar variables con `var`/`final`/`const` y justificar cuál usar en cada caso
+- [ ] Reconocer cuándo Dart infiere un tipo y por qué evitar `dynamic` salvo caso justificado
+- [ ] Aplicar null safety (`?`, `?.`, `??`, `??=`, `!`, `late`) sin recurrir a `!` por defecto
 
 ## 📚 Requisitos previos
 
-- Semana anterior completada
-- Dart SDK local (`dart --version` funcionando) y/o Docker
+- Programación básica (variables, tipos, condicionales) en cualquier otro lenguaje — no
+  requiere Dart previo
+- Dart SDK local (`dart --version` funcionando) y/o Docker — ver
+  [docs/setup/README.md](../../docs/setup/README.md)
 
 ## 🗂️ Estructura de la semana
 
@@ -29,15 +34,19 @@ Al finalizar esta semana, el estudiante será capaz de:
 
 ### Teoría
 
-> 🚧 Por generar — usa el prompt `nueva-teoria`
+1. [Introducción a Dart y al Entorno de Trabajo](1-teoria/01-introduccion-dart-y-entorno.md)
+2. [Variables, Tipos y Modificadores](1-teoria/02-variables-y-tipos.md)
+3. [Null Safety](1-teoria/03-null-safety.md)
 
 ### Prácticas
 
-> 🚧 Por generar — usa el prompt `nuevo-ejercicio`
+1. [Ejercicio 01 — Variables y Tipos](2-practicas/ejercicio-01-variables-y-tipos/README.md)
+2. [Ejercicio 02 — Null Safety](2-practicas/ejercicio-02-null-safety/README.md)
 
 ### Proyecto
 
-> 🚧 Por generar — usa el prompt `nuevo-proyecto`
+[Ficha de Dominio en Consola](3-proyecto/README.md) — integra variables, tipos y null safety
+sobre el dominio único asignado.
 
 ## ⏱️ Distribución del tiempo (6 horas)
 
@@ -52,7 +61,7 @@ Al finalizar esta semana, el estudiante será capaz de:
 - [ ] Ejercicios completados (prácticas descomentadas y funcionando)
 - [ ] Proyecto adaptado al dominio asignado
 - [ ] `dart analyze` sin errores (verificable con Docker)
-- [ ] `dart test` pasando
+- [ ] Programa ejecutándose por consola con `dart run`
 
 ## 🔗 Navegación
 

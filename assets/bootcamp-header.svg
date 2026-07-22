@@ -1,10 +1,104 @@
-<svg width="800" height="160" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Bootcamp Dart Zero to Hero</title>
-  <desc id="desc">Encabezado del bootcamp Dart: fondo oscuro con el texto "bc-dart" y "Zero to Hero"</desc>
-  <rect width="800" height="160" fill="#0d1117"/>
-  <rect x="24" y="24" width="752" height="112" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-  <text x="56" y="86" fill="#40C4FF" font-size="34" font-weight="700" font-family="system-ui, -apple-system, sans-serif">bc-dart</text>
-  <text x="56" y="116" fill="#8b949e" font-size="16" font-family="system-ui, -apple-system, sans-serif">Bootcamp Dart · Zero to Hero · 10 semanas · 60 horas</text>
-  <circle cx="720" cy="80" r="34" fill="#0175C2"/>
-  <text x="720" y="88" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">D</text>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="300" viewBox="0 0 1200 300"
+     role="img" aria-label="bc-dart — Bootcamp Dart: Zero to Hero">
+
+  <defs>
+    <!-- Patrón de puntos decorativos: refuerza la estética tech del banner -->
+    <pattern id="dotgrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#40C4FF" opacity="0.10"/>
+    </pattern>
+  </defs>
+
+  <!-- ── Fondos ──────────────────────────────────────────── -->
+  <rect width="1200" height="300" fill="#0d1117"/>
+  <rect width="1200" height="300" fill="url(#dotgrid)"/>
+  <!-- Panel izquierdo — área de Dash -->
+  <rect x="5" y="0" width="275" height="300" fill="#080f1a"/>
+  <!-- Panel derecho — área de código decorativo -->
+  <rect x="820" y="0" width="375" height="300" fill="#080f1a"/>
+
+  <!-- Barras de acento Dart (azul oficial #0175C2) -->
+  <rect x="0"    y="0" width="5" height="300" fill="#0175C2"/>
+  <rect x="1195" y="0" width="5" height="300" fill="#0175C2"/>
+
+  <!-- ══ DASH ═══════════════════════════════════════════════
+       Mascota oficial de Dart — colibrí estilizado, figura
+       geométrica simplificada. Capas: cola → cuerpo → cabeza →
+       pico → ojo → brillo
+  ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Cola: triángulo curvo detrás del cuerpo, azul claro -->
+  <path d="M 95 220 Q 55 235 45 265 Q 80 258 108 235 Z" fill="#13B9FD"/>
+
+  <!-- Cuerpo: gota invertida, azul oficial Dart -->
+  <path d="M 140 90
+           C 185 90 210 130 205 175
+           C 200 220 165 245 140 245
+           C 115 245 80 220 75 175
+           C 70 130 95 90 140 90 Z" fill="#0175C2"/>
+
+  <!-- Vientre: óvalo más claro para dar volumen -->
+  <ellipse cx="140" cy="185" rx="42" ry="52" fill="#40C4FF"/>
+
+  <!-- Ala: forma curva sobre el costado del cuerpo -->
+  <path d="M 175 150 Q 215 155 220 190 Q 190 195 168 175 Z" fill="#02569B"/>
+
+  <!-- Pico: pequeño triángulo puntiagudo característico -->
+  <path d="M 130 95 L 108 70 L 142 88 Z" fill="#02569B"/>
+
+  <!-- Ojo: esclera blanca + pupila -->
+  <circle cx="152" cy="118" r="12" fill="#ffffff"/>
+  <circle cx="155" cy="118" r="6" fill="#0d1117"/>
+  <circle cx="152" cy="114" r="2.5" fill="#ffffff"/>
+
+  <!-- ══ TEXTO PRINCIPAL ════════════════════════════════════ -->
+
+  <!-- Etiqueta de contexto -->
+  <text x="300" y="62"
+        font-family="Inter, 'Roboto', 'Open Sans', sans-serif"
+        font-size="12" font-weight="600"
+        fill="#40C4FF" letter-spacing="5">BOOTCAMP · BC-DART</text>
+
+  <!-- Título principal: "Bootcamp" en blanco, "Dart" en azul oficial -->
+  <text x="297" y="178"
+        font-family="Inter, 'Roboto', 'Open Sans', sans-serif"
+        font-size="78" font-weight="800"><tspan fill="#e6edf3">Bootcamp </tspan><tspan fill="#40C4FF">Dart</tspan></text>
+
+  <!-- Línea decorativa -->
+  <rect x="300" y="194" width="500" height="3" rx="2" fill="#0175C2"/>
+
+  <!-- Subtítulo -->
+  <text x="302" y="232"
+        font-family="Inter, 'Roboto', sans-serif"
+        font-size="20" font-weight="300"
+        fill="#e6edf3" letter-spacing="1">Zero to Hero</text>
+
+  <!-- Estadísticas del bootcamp -->
+  <text x="302" y="265"
+        font-family="Inter, 'Roboto', sans-serif"
+        font-size="13"
+        fill="#7d8590" letter-spacing="1">Dart stable  ·  10 semanas  ·  60 horas  ·  6 h/semana</text>
+
+  <!-- ══ CÓDIGO DECORATIVO ══════════════════════════════════
+       Hello World de Dart — guiño visual al primer programa que
+       escribe todo estudiante. Opacidad baja: es textura, no
+       contenido principal.
+  ═══════════════════════════════════════════════════════════ -->
+  <g opacity="0.35"
+     font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace"
+     font-size="13">
+    <!-- Comentario -->
+    <text x="848" y="88"  fill="#6e7681">// Semana 01 — ¡Hola, Dash!</text>
+    <!-- void main() { -->
+    <text x="848" y="112" fill="#e6edf3"><tspan fill="#ff7b72">void</tspan><tspan fill="#d2a8ff"> main</tspan><tspan fill="#e6edf3">() {</tspan></text>
+    <!-- final greeting = -->
+    <text x="878" y="136" fill="#e6edf3"><tspan fill="#ff7b72">final</tspan> greeting =</text>
+    <!-- string literal -->
+    <text x="878" y="158" fill="#a5d6ff">    "¡Hola, Dash!";</text>
+    <!-- print call -->
+    <text x="878" y="182" fill="#e6edf3">print(greeting);</text>
+    <!-- closing brace -->
+    <text x="848" y="206" fill="#e6edf3">}</text>
+  </g>
+
 </svg>
